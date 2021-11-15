@@ -1,0 +1,39 @@
+LABORATORIO 3 (Backups Remotos) -->
+
+Crear claves Privadas y Publicas : 
+
+	$ssh-keygen -t rsa
+	$/home/lsi/id_rsa
+	$ssh-add /home/lsi/.ssh/id_rsa
+
+Abrir una conexion ssh desde la terminal : 
+
+	$ssh usuario@IP_EXTERNA --> Se introduce Yes
+	$exit (Para cerrar la conexion)
+
+Backup Remoto con rsync  : 
+
+	$ssh lsi@IP_EXTERNA
+	$mkdir nombre_carpeta
+	$rsync -arv -e ssh /home/usuarioPC/Seguridad lsi@IP_EXTERNA:/home/lsi/nombre_carpeta
+
+Backup Remoto con cp : 
+
+	$ssh lsi@IP_EXTERNA
+	$mkdir nombre_carpeta
+	$scp /home/usuarioPC/Seguridad/nombre_archivo_a_copiar lsi@IP_EXTERNA:/home/lsi/nombre_carpeta
+	*(El scp hay que hacerlo con todos los archivos a enviar no se puede copiar una carpeta)*
+
+LABORATORIO 4 (Certificados) --> 
+
+Crear un index y atribuirlo al servidor: 
+
+	https://www.digitalocean.com/community/tutorials/como-configurar-virtual-hosts-de-apache-en-ubuntu-16-04-es
+
+Pasar de http a https : 
+	
+	https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04-es
+
+LABORATORIO 5 (gpg) -->
+
+ 
