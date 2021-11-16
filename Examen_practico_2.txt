@@ -14,6 +14,7 @@ LABORATORIO 3 (Backups Remotos) -->
 
 		$ssh lsi@IP_EXTERNA
 		$mkdir nombre_carpeta
+		exit (para salir del servidor)
 		$rsync -arv -e ssh /home/usuarioPC/Seguridad lsi@IP_EXTERNA:/home/lsi/nombre_carpeta
 
 	Backup Remoto con cp : 
