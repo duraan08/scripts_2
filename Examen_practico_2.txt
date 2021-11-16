@@ -18,8 +18,11 @@ LABORATORIO 3 (Backups Remotos) -->
 		$rsync -arv -e ssh /home/usuarioPC/Seguridad lsi@IP_EXTERNA:/home/lsi/nombre_carpeta
 	
 	Backup remoto con --link-dest : 
+		$rsync -av --link-dest=/home/usuarioPC/pruebaBackup . lsi@IP_EXTERNA:/home/lsi/nombre_carpeta
+	
+	Backup remoto con --compare-dest : 
+		$rsync -av --link-dest=/home/usuario/pruebaBackup . lsi@IP_EXTERNA:/home/lsi/nombre_carpeta
 		
-
 	Backup Remoto con cp : 
 
 		$ssh lsi@IP_EXTERNA
